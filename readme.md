@@ -14,3 +14,9 @@
   }
 
 ```
+
+## JS
+
+- querySelectorAll(CSSSelector) puts all selected elements into the 'Nodelist' which is very similar to an array.
+
+- `'+'` is equal to `'parseInt()'` which makes the value a number
