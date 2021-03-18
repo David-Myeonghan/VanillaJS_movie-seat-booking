@@ -35,6 +35,7 @@ body {
 }
 
 .container {
+	/* Connected with .screen transform */
 	perspective: 1000px;
 	margin-bottom: 30px;
 }
@@ -79,6 +80,7 @@ body {
 	padding: 5px 10px;
 	border-radius: 5px;
 	color: #777;
+	/* No bullet point */
 	list-style-type: none;
 	display: flex;
 	justify-content: space-between;
@@ -96,6 +98,7 @@ body {
 }
 
 .row {
+	/* .seats will be flex */
 	display: flex;
 }
 

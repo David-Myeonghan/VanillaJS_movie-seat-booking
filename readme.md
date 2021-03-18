@@ -67,8 +67,14 @@ console.log(arr.indexOf(100)) // -1
 localStorage.setItem('name', 'David');
 ```
 
-select event 발생하지 않더라도 첫번째 영화를 로컬 스토리지에 담아두는 방법...
-(select에서 첫번째 영화 볼 거라서 영화는 선택안하고, 좌석 선택 바로 할 때는 로컬스토리지에 담기지 않는다.)
+- select event 발생하지 않더라도 첫번째 영화를 로컬 스토리지에 담아두는 방법...
+  (select에서 첫번째 영화 볼 거라서 영화는 선택안하고, 좌석 선택 바로 할 때는 로컬스토리지에 담기지 않는다.)
 
-1. 즉시실행 함수로 초기화하기 - Unnecessary flow -> Not Scalable.
-1. 좌석선택시 default select value 같이 저장해두기 - Reasonable!
+  - 즉시실행 함수로 초기화하기 - Unnecessary flow -> Not Scalable.
+  - 좌석선택시(이벤트 발생시) default select value 같이 저장해두기 -> Reasonable!
+  - 굳이 이 페이지에선 할 필요 없다 실제라면 다음 화면 넘어갈 때 저장해두면 된다 -> Best!
+
+  ```
+  movieSelect.selectedIndex;
+  movieSelect.value; // 이용해서 저장
+  ```
