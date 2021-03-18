@@ -27,8 +27,8 @@ function updateSelectedCount() {
 	// we need stringify as what we'll gonna save is an array.
 	localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
 
-	console.log(movieSelect.selectedIndex);
-	console.log(movieSelect.value);
+	// console.log(movieSelect.selectedIndex);
+	// console.log(movieSelect.value);
 
 	const selectedSeatsCount = selectedSeats.length;
 

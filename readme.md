@@ -73,6 +73,7 @@ localStorage.setItem('name', 'David');
   - 즉시실행 함수로 초기화하기 - Unnecessary flow -> Not Scalable.
   - 좌석선택시(이벤트 발생시) default select value 같이 저장해두기 -> Reasonable!
   - 굳이 이 페이지에선 할 필요 없다 실제라면 다음 화면 넘어갈 때 저장해두면 된다 -> Best!
+    updateSelectedCount()에서 개선 필요 - seats만 관여하는 것이 타당한가
 
   ```
   movieSelect.selectedIndex;
