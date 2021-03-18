@@ -20,3 +20,55 @@
 - querySelectorAll(CSSSelector) puts all selected elements into the 'Nodelist' which is very similar to an array.
 
 - `'+'` is equal to `'parseInt()'` which makes the value a number
+
+- Save in local storage
+
+- Spread syntax `'...'`:
+  Allows an iterable such as an array expression or string to be expanded in places where 0 or more arguments are expected. It's passing in the value of an array, not passing in the actual array. Can use it with objects.
+
+```
+const arr = [1,2,3];
+const arr2 = [...arr,4,5];
+
+console.log(arr2); // Array[1,2,3,4,5]
+```
+
+- High Order Array method
+
+- forEach():
+  doesn't return anything. Just loops through.
+
+- map():
+  will return an array
+
+```
+arr.forEach(function(item) {
+    console.log(item)
+})
+
+const arr3 = arr2.map(function(item) {
+    return item * 2;
+});
+
+console.log(arr3) // Array[2,4,6,8,10]
+```
+
+- indexOf():
+
+```
+const arr = [1,2,3,4,5];
+console.log(arr.indexOf(5)) // 4
+console.log(arr.indexOf(100)) // -1
+```
+
+- localStorage: don't need to import anything.
+
+```
+localStorage.setItem('name', 'David');
+```
+
+select event 발생하지 않더라도 첫번째 영화를 로컬 스토리지에 담아두는 방법...
+(select에서 첫번째 영화 볼 거라서 영화는 선택안하고, 좌석 선택 바로 할 때는 로컬스토리지에 담기지 않는다.)
+
+1. 즉시실행 함수로 초기화하기 - Unnecessary flow -> Not Scalable.
+1. 좌석선택시 default select value 같이 저장해두기 - Reasonable!
